@@ -1,5 +1,113 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+    font-family: "IBM Plex mono",sans-serif;
+    background: url("../images/cover-image-dark.png") no-repeat center #000028;
+    background-size: cover;
+    background-attachment: fixed;
+    line-height: 130%;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+.header {
+    display: grid;
+    grid-template-rows: 1fr min-content 1fr;
+    grid-template-columns: 1fr;
+    padding: min(2.66%, 20px);
+    block-size: 100vh;
+}
+
+h2,
+h3,
+h4 {
+    font-size: inherit;
+}
+
+.decorated-zone{
+    min-height: 100%;
+}
+
+.decorated-zone:before {
+    content: "";
+    position: absolute;
+    grid-row: 1/2;
+    justify-self: end;
+    block-size: 25px;
+    inline-size: 25px;
+    gap: 10px;
+    border-inline-end: 1px solid var( --accent-color, #ff0070);
+    border-block-start: 1px solid var( --accent-color, #ff0070);
+}
+
+.decorated-zone:after {
+    content: "";
+    position: absolute;
+    align-self: end;
+    block-size: 25px;
+    inline-size: 25px;
+    border-inline-start: 1px solid var( --accent-color, #ff0070);
+    border-block-end: 1px solid var( --accent-color, #ff0070);
+}
+
+.header_zone{
+    display: inline-block;
+    position: absolute;
+    grid-row: 1 / 2;
+    justify-self: end;
+    inset-inline-end: 1.5em;
+}
+
+.header_zone:before {
+    content: "REC";
+    padding-inline-end: 1.5em;
+    color: var( --accent-color, #ff0070);
+}
+
+.header_zone:after {
+    content: "";
+    display: inline-block;
+    block-size: 9px;
+    inline-size: 9px;
+    background-color: var( --accent-color, #ff0070);
+    border-radius: 100%;
+    box-shadow: 0 0 5px 3px #ff0070;
+}
+
+.header__theme-menu{
+    justify-self: end;
+    align-self: center;
+}
+.header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header__theme-menu-button{
+    font-family: var(--main-font, sans-serif);
+    color: var( --accent-color, #ff0070);
+    background-color: transparent;
+    appearance: none;
+    padding-block: 1.5px;
+    padding-inline: 13px;
+}
+
+.title{
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
+    font-family: "IBM Plex mono";
+    font-weight: bold;
+    line-height: 96px;
+    color: var( --title-color, #DB00FF);
+}
+
+.title-decor{
+    display: flex;
+    position: relative;
+    justify-self: flex-end;
+    gap: 3px;
+}
+
+.title-decor_text{
+    color: #000028;
+    font-size: 18px;
 }
