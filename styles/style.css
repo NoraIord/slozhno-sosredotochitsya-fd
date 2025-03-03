@@ -6,13 +6,16 @@
     background-size: cover;
     background-attachment: fixed;
     line-height: 130%;
+    width: 100%;
+    min-width: var(--mobile-width);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 .header {
     display: grid;
     grid-template-rows: 1fr min-content 1fr;
     grid-template-columns: 1fr;
-    padding: min(2.66%, 20px);
+    margin-bottom: 32px;
+    padding: var(--default-padding);
     block-size: 100vh;
 }
 
@@ -24,6 +27,7 @@ h4 {
 
 .decorated-zone{
     min-height: 100%;
+    position: relative;
 }
 
 .decorated-zone:before {
@@ -89,6 +93,7 @@ h4 {
     appearance: none;
     padding-block: 1.5px;
     padding-inline: 13px;
+    border: none;
 }
 
 .title{
@@ -110,4 +115,8 @@ h4 {
 .title-decor_text{
     color: #000028;
     font-size: 18px;
+    padding-top: 55px;
+    padding-bottom: 60px;
+
 }
+
