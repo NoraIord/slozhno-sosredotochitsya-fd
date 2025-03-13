@@ -10,6 +10,7 @@
     min-width: var(--mobile-width);
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
+
 .header {
     display: grid;
     grid-template-rows: 1fr min-content 1fr;
