@@ -261,23 +261,27 @@ button {
     font-size: var(--mobile-header-clamp);
 }
 
-@media (width <= 375px){
-    .page{
+@media (width <= 375px) {
+    .page {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .header{
+
+    .header {
         min-height: 375px;
         max-height: var(--mobile-header-height);
     }
-    :root{
+
+    :root {
         --default-padding: 0 10px 0 10px;
     }
-    .title{
+
+    .title {
         font-size: var(--mobile-header-clamp);
     }
+
     .main-section {
         display: grid;
         grid-template-columns: 1fr;
@@ -285,6 +289,7 @@ button {
         margin-bottom: 20px;
         gap: 10px;
     }
+
     .gallery-image {
         height: 100%;
         object-fit: cover;
