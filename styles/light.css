@@ -25,18 +25,23 @@
 
 .theme-light .page {
     /* Вам также нужно будет написать ряд подобных селекторов */
-    --background-color: #fff1f7;
-    --main-sections-text-color: #353430;
-    --decorated-text-color: #353430;
-    --header-main-color: #ffc2e6;
-    --after-before-color: #353430;
-    --color-main-title: #353430;
-    --color-for-button: #353430;
-    --color-decorated: #ff8dcb;
-    --color-anchor-link: #f1b2ce;
-    --color-shadow-and-focus: #ff8dcb;
-    --bg-image: url("../images/cover-image-light.png");
-    --button-outline-hover-opacity: rgba(50, 49, 45, 0.4);
+    @media (prefers-color-scheme: light) {
+        :root {
+            --background-color: #fff1f7;
+            --main-sections-text-color: #353430;
+            --decorated-text-color: #353430;
+            --header-main-color: #ffc2e6;
+            --after-before-color: #353430;
+            --color-main-title: #353430;
+            --color-for-button: #353430;
+            --color-decorated: #ff8dcb;
+            --color-anchor-link: #f1b2ce;
+            --color-shadow-and-focus: #ff8dcb;
+            --bg-image: url("../images/cover-image-light.png");
+            --button-outline-hover-opacity: rgba(50, 49, 45, 0.4);
+        }
+    }
+
 }
 
 

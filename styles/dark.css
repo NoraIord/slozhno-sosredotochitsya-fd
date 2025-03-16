@@ -25,7 +25,7 @@
 
 .theme-dark .page {
     /* Вам также нужно будет написать ряд подобных селекторов */
-
+    display: block;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,5 +42,6 @@
         --menu-outline-color: #ff007060;
         --main-sections-text-color: #f1b2ce;
         --decorated-text-color: #000028;
+        --mobile-header-clamp: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     }
 }

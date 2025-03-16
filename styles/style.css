@@ -2,7 +2,8 @@
 
 .page {
     font-family: "IBM Plex mono", sans-serif;
-    background: url("../images/cover-image-dark.png") no-repeat center #000028;
+    background-color: var(--bg-color, #000028);
+    background: url("../images/cover-image-dark.png") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
@@ -61,7 +62,6 @@ button {
 
 .header__theme-menu-button:focus {
     outline: none;
-
 }
 
 .header__theme-menu-button:focus-visible {
@@ -87,7 +87,7 @@ button {
     inline-size: 25px;
     gap: 10px;
     inset-inline-end: 0.6em;
-    inset-block-start: 0.5em;
+    inset-block-start: 0.6em;
     border-inline-end: 1px solid var(--accent-color, #ff0070);
     border-block-start: 1px solid var(--accent-color, #ff0070);
 }
@@ -165,6 +165,7 @@ button {
 .main-content {
     padding: var(--default-padding);
     padding-top: 8px;
+    background-color: var(--bg-color);
 }
 
 .main-title {
@@ -173,7 +174,7 @@ button {
     font-weight: bold;
     color: var(--accent-color, #ff0070);
     margin-bottom: 20px;
-    padding-top: 33px;
+    padding-top: 30px;
 }
 
 .main-small-title {
@@ -189,7 +190,7 @@ button {
     font-family: var(--main-font-family);
     font-size: 18px;
     font-weight: normal;
-    line-height: 23.4px;
+    line-height: 23.3px;
     padding-bottom: 20px;
 }
 
@@ -205,6 +206,7 @@ button {
 
 .p-link:hover {
     border-bottom: 1px var(--main-sections-text-color);
+    text-decoration: underline;
 }
 
 .p-link:focus {
@@ -226,9 +228,9 @@ button {
 .gallery {
     display: grid;
     grid-template-columns: 1fr;
-    padding: var(--default-padding);
-    margin-bottom: 42px;
     gap: 10px;
+    background-color: var(--bg-color);
+    padding-bottom: 40px;
 }
 
 .gallery-image {
@@ -238,7 +240,7 @@ button {
 
 .gallery-title {
     margin-bottom: 0;
-    margin-top: 7px;
+    margin-top: 26px;
 }
 
 .footer {
@@ -247,6 +249,7 @@ button {
     grid-template-rows: 1fr min-content 1fr;
     min-height: var(--mobile-header-height);
     height: 100vh;
+    background-color: var(--bg-color);
 }
 
 .footer-header {
@@ -258,95 +261,30 @@ button {
     font-size: var(--mobile-header-clamp);
 }
 
-@media (width >= 768px) {
-    .header {
-        min-height: 1024px;
-        margin-bottom: 52px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+@media (width <= 375px){
+    .page{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
-    :root {
-        --default-padding: 0 20px 0 20px;
+    .header{
+        min-height: 375px;
+        max-height: var(--mobile-header-height);
     }
-
-    .title {
-        font-size: var(--laptop-tablet-header-clamp);
-        margin-top: 15px;
-        margin-left: -18px;
+    :root{
+        --default-padding: 0 10px 0 10px;
     }
-
-    .header__theme-menu {
-        margin-top: 10px;
+    .title{
+        font-size: var(--mobile-header-clamp);
     }
-
     .main-section {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr;
         row-gap: 0;
-        margin-bottom: 28px;
-        gap: 20px;
-    }
-
-    .second-article {
-        grid-column: span2;
-    }
-
-    .first-article {
-        grid-column: 2;
-    }
-
-    .main-small-title {
-        margin-top: 0;
-    }
-
-    .simple-header {
         margin-bottom: 20px;
+        gap: 10px;
     }
-
-    .last-main_section {
-        row-gap: 0;
-        margin-bottom: 38px;
-        padding-top: 25px;
-    }
-
-    .cluster-header {
-        grid-column-start: 2;
-    }
-
-    .second-main_section {
-        margin-bottom: 12px;
-    }
-
-    .attn-header {
-        margin-bottom: 20px;
-        margin-top: 0;
-    }
-
-    .header-text {
-        justify-self: end;
-        width: 50%;
-    }
-
-    .cluster-article {
-        grid-column-start: 2;
-    }
-
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        padding-top: 0;
-        padding-right: 0;
-        gap: 20px;
-    }
-
-    .gallery-title {
-        margin-bottom: 0;
-        margin-right: 20px;
-        grid-column: 1/5;
-        grid-row: 1/2;
-    }
-
     .gallery-image {
         height: 100%;
         object-fit: cover;
@@ -376,118 +314,5 @@ button {
         grid-column: 2/4;
         grid-row: 4/5;
     }
-
-    .footer-header {
-        margin-left: 5px;
-        margin-top: 0;
-    }
-
-    .footer-title {
-        font-size: var(--laptop-tablet-header-clamp);
-        margin-top: 15px;
-        margin-left: -18px;
-    }
-
-    .footer-title::before {
-        top: 20px;
-        right: 20px;
-    }
-
-    .footer-title::after {
-        left: 20px;
-        bottom: 20px;
-    }
-
-    .footer-header::before {
-        top: 36px;
-    }
-
-    .footer-header::after {
-        bottom: 4px;
-    }
-
-    .rec {
-        top: 20px;
-        right: 32px;
-    }
-
 }
-
-@media (width >= 1024px) {
-    .header {
-        min-height: 768px;
-    }
-    .header__theme-menu{
-        justify-content: center;
-        align-items: start;
-        align-self: start;
-        margin-top: 0;
-        gap: 10px;
-    }
-    .header__theme-menu-list{
-        flex-direction: row;
-        align-items: start;
-    }
-    .header-text {
-        min-height: 23%;
-        margin-top: 18px;
-    }
-    .main-section {
-        column-gap: 10px;
-    }
-    .attn-header{
-        grid-column: span 1;
-    }
-    .elbo{
-        grid-column: 2/4;
-    }
-    .second-main_section{
-        grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 36px;
-        column-gap: 20px;
-    }
-    .second-article{
-        grid-column: span 1;
-    }
-    .last-main_section{
-        padding-top: 0;
-        margin-bottom: 37px;
-    }
-    .footer{
-        min-height: 768px;
-    }
-    .footer-title{
-        font-size: var(--laptop-tablet-header-clamp);
-        margin-left: -20px;
-        margin-bottom: 10px;
-    }
-    .footer-title::before {
-        right: 20px;
-        top: 20px;
-    }
-    .footer-title::after {
-        bottom: 18px; /*20px*/
-    }
-    .footer-header{
-        margin-top: 10px;
-        margin-left: 0;
-    }
-    .footer-header::before {
-        top: 38px;
-    }
-    .footer-header::after {
-        bottom: 2px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 
