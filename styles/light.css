@@ -24,8 +24,7 @@
         display: none;
     }
 }
-
-/*@media (prefers-color-scheme: light) {
+*@media (prefers-color-scheme: light) {
     :root {
         --font-family: "IBM Plex Mono", monospace;
         --heading-text: #ffc2e6;
@@ -43,6 +42,5 @@
         display: none;
     }
 }
-*/
 
 
