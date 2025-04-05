@@ -171,7 +171,7 @@ button {
 
 .main-section {
     display: grid;
-    gap: 20px;
+    gap: 19px;
     margin-top: 50px;
 }
 
@@ -180,7 +180,7 @@ button {
 }
 
 .article {
-    margin-bottom: 11px;
+    margin-bottom: 0;
 }
 
 .attn-header {
@@ -208,7 +208,7 @@ button {
 
 .main-article {
     display: grid;
-    gap: 10px;
+    gap: 13px;
 }
 
 .main-paragraph {
@@ -243,8 +243,8 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
-    padding-bottom: 40px;
-    margin-top: 30px;
+    padding-bottom: 42px;
+    margin-top: 23px;
 }
 
 .gallery-image {
@@ -288,6 +288,10 @@ button {
         padding: 20px;
     }
 
+    .header-text{
+        margin-left: 384px;
+    }
+
     .header_zone {
         right: 81px;
         top: 41px;
@@ -317,8 +321,11 @@ button {
     }
 
     .main_section {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        margin-top: 80px;
+        gap: 10px;
+        row-gap: 0;
+        margin-bottom: 28px;
     }
 
     .main_section:first-child {
@@ -330,8 +337,8 @@ button {
     }
 
     .attn-header {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
+        grid-column: -3;
+        grid-row: span 2;
     }
 
 
