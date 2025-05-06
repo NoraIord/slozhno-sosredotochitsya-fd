@@ -206,12 +206,21 @@ button {
     font-size: 18px;
     font-weight: normal;
     color: var(--decorated-text-color, #ff0070);
-    margin-bottom: 7px;
+    margin-bottom: 8px;
+}
+
+.gold-fish{
+    margin-bottom: 20px;
 }
 
 .main-article {
     display: grid;
     gap: 10px;
+}
+
+.what{
+    display: grid;
+    gap: 20px;
 }
 
 .main-paragraph {
@@ -258,7 +267,7 @@ button {
 
 .gallery-title {
     margin-bottom: 0;
-    margin-top: 20px;
+    margin-top: 16px;
 }
 
 .pic {
@@ -480,9 +489,15 @@ button {
     }
 
     .main-content {
-        display: flex;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column: 1 / -1;
+        grid-row: 2 span;
+        width: 100%;
+        margin-top: 58px;
+    }
+
+    .main-paragraph{
         align-items: flex-start;
-        margin-top: 61px;
     }
 
     .decorated-zone::after {
@@ -509,9 +524,9 @@ button {
     }
 
     .main-small-title{
+        text-align: left;
+        display: inline-grid;
         height: 23px;
-        padding: 0;
-        flex-grow: 0;
     }
 
     .main_section:first-child {
@@ -523,7 +538,6 @@ button {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        grid-column: span 1;
     }
 
     .main-content-section {
