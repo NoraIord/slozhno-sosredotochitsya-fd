@@ -74,6 +74,7 @@ button {
     pointer-events: none;
 }
 
+
 .decorated-zone {
     min-height: 100%;
     position: relative;
@@ -89,8 +90,8 @@ button {
     gap: 10px;
     inset-inline-end: 0.6em;
     inset-block-start: 0.6em;
-    border-inline-end: 1px solid var(--accent-color, #ff0070);
-    border-block-start: 1px solid var(--accent-color, #ff0070);
+    border-inline-end: 1px solid var(--border-color, #ff0070);
+    border-block-start: 1px solid var(--border-color, #ff0070);
 }
 
 .decorated-zone::after {
@@ -101,8 +102,8 @@ button {
     inline-size: 25px;
     inset-inline-start: 0.6em;
     inset-block-end: 0.6em;
-    border-inline-start: 1px solid var(--accent-color, #ff0070);
-    border-block-end: 1px solid var(--accent-color, #ff0070);
+    border-inline-start: 1px solid var(--border-color, #ff0070);
+    border-block-end: 1px solid var(--border-color, #ff0070);
 }
 
 .header_zone {
@@ -199,14 +200,13 @@ button {
 }
 
 .sky {
-    margin-top: 23px;
+    margin-top: 21px;
 }
 
 .main-small {
     font-size: 18px;
     font-weight: normal;
     color: var(--decorated-text-color, #ff0070);
-    margin-bottom: 8px;
 }
 
 .gold-fish{
@@ -248,6 +248,7 @@ button {
 .p-link:focus {
     border: 1px solid var(--main-sections-text-color);
     outline: none;
+    text-decoration: underline;
 }
 
 .gallery {
@@ -300,9 +301,6 @@ button {
     }
 
     .header__theme-menu {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
         margin-top: -1px;
     }
 
@@ -320,10 +318,6 @@ button {
         margin: 20px 20px;
     }
 
-    .main-title {
-        height: 67px;
-    }
-
     .decorated-zone::after {
         inset-inline-start: 1.3em;
         inset-block-end: 1.3em;
@@ -338,11 +332,8 @@ button {
         inset-block-start: 0.1em;
     }
 
-    .main_section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        margin-bottom: 28px;
+    .sky{
+        margin-top: 20px;
     }
 
     .main_section:first-child {
@@ -352,7 +343,7 @@ button {
     .attn-header {
         grid-column: -3;
         grid-row: span 2;
-        width: 236px;
+        max-width: 236px;
     }
 
     .main-content {
@@ -364,7 +355,7 @@ button {
         gap: 20px;
     }
 
-    .article {
+    .main-article {
         font-weight: normal;
     }
 
@@ -379,17 +370,20 @@ button {
     .main-content-section {
         margin: 80px 0;
         display: flex;
-        gap: 20px;
+    }
+
+    .gold-fish{
+        width: 236px;
     }
 
     .flex-container {
         display: flex;
-        gap: 20px;
         margin-bottom: -40px;
     }
 
     .flex-item-left {
         flex-basis: 236px;
+        padding-right: 20px;
     }
 
     .flex-item-right {
@@ -400,13 +394,15 @@ button {
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 37px;
+        margin-top: 42px;
     }
 
     .gallery-title {
         grid-column: 1/4;
         grid-row: 1/2;
         margin-bottom: 0;
-        margin-top: 7px;
+        margin-top: 0;
     }
 
     .sunset {
@@ -478,14 +474,7 @@ button {
     }
 
     .attn-header {
-        width: 314px;
-    }
-
-    .main_section {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        margin-bottom: 28px;
+        max-width: 314px;
     }
 
     .main-content {
@@ -493,7 +482,6 @@ button {
         grid-column: 1 / -1;
         grid-row: 2 span;
         width: 100%;
-        margin-top: 58px;
     }
 
     .main-paragraph{
@@ -504,7 +492,7 @@ button {
         top: 20px;
         right: 20px;
     }
-
+/*не очень понимаю комментарий по поводу размера шрифта,все же верно стоит*/
     .title {
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
@@ -523,16 +511,23 @@ button {
         gap: 10px;
     }
 
-    .main-small-title{
-        text-align: left;
-        display: inline-grid;
-        height: 23px;
+    .main{
+        margin: 0 20px;
     }
 
-    .main_section:first-child {
+    .main-small-title{
+        display: flex;
+        text-align: left;
+    }
+
+    .main-section:first-child {
         margin-top: 60px;
     }
 
+    .gold-fish {
+        min-width: 315px;
+        height: 98px;
+    }
 
     .what {
         display: grid;
@@ -548,7 +543,6 @@ button {
         padding-top: 0;
         display: grid;
         gap: 20px;
-        grid-template-columns: repeat(3, 1fr);
         padding-right: 0;
     }
 

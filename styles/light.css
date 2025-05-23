@@ -15,28 +15,26 @@
     --main-sections-text-color: #353430;
 }
 
-.header__theme-menu-button:hover {
-    border: 1px solid #32312d66;
-}
-
 .theme-light .page {
     .header_zone {
         display: none;
     }
 }
-*@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
     :root {
         --font-family: "IBM Plex Mono", monospace;
-        --heading-text: #ffc2e6;
-        --text-color: #353430;
-        --bg-color: #fff1f7;
         --bg-image: url(../images/cover-image-light.png);
+        --title-color: #ffc2e6;
+        --decorated-text-color: #353430;
+        --bg-color: #fff1f7;
         --accent-color: #ff8dcb;
+        --color-decorated: #ff8dcb;
         --border-color: #353430;
         --secondary-color: #353430;
         --subtitle-color: #353430;
         --section-title-color: #353430;
-        --hover-color: #32312d66;
+        --text-color: #353430;
+        --main-sections-text-color: #353430;
     }
     .header_zone {
         display: none;
