@@ -76,7 +76,6 @@ button {
 
 
 .decorated-zone {
-    min-height: 100%;
     position: relative;
 }
 
@@ -209,7 +208,7 @@ button {
     color: var(--decorated-text-color, #ff0070);
 }
 
-.gold-fish{
+.gold-fish {
     margin-bottom: 20px;
 }
 
@@ -217,7 +216,7 @@ button {
     gap: 10px;
 }
 
-.what{
+.what {
     display: grid;
     gap: 20px;
 }
@@ -241,14 +240,12 @@ button {
 }
 
 .p-link:hover {
-    border-bottom: 1px var(--main-sections-text-color);
-    text-decoration: underline;
+    border-bottom: 1px solid var(--main-sections-text-color);
 }
 
 .p-link:focus {
     border: 1px solid var(--main-sections-text-color);
     outline: none;
-    text-decoration: underline;
 }
 
 .gallery {
@@ -325,6 +322,7 @@ button {
 
     .title {
         margin-left: -20px;
+        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
 
     .decorated-zone::before {
@@ -332,7 +330,7 @@ button {
         inset-block-start: 0.1em;
     }
 
-    .sky{
+    .sky {
         margin-top: 20px;
     }
 
@@ -350,7 +348,7 @@ button {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-top: 84px;
+        margin-top: 83px;
         padding: 0;
         gap: 20px;
     }
@@ -372,8 +370,9 @@ button {
         display: flex;
     }
 
-    .gold-fish{
-        width: 236px;
+    .gold-fish {
+        min-width: 236px;
+        width: 100%;
     }
 
     .flex-container {
@@ -457,6 +456,10 @@ button {
         padding: 20px 0;
     }
 
+    .footer-header {
+        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    }
+
     .footer .title {
         margin-left: 0;
     }
@@ -484,17 +487,13 @@ button {
         width: 100%;
     }
 
-    .main-paragraph{
+    .main-paragraph {
         align-items: flex-start;
     }
 
     .decorated-zone::after {
         top: 20px;
         right: 20px;
-    }
-/*не очень понимаю комментарий по поводу размера шрифта,все же верно стоит*/
-    .title {
-        font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
 
     .header__theme-menu {
@@ -511,11 +510,11 @@ button {
         gap: 10px;
     }
 
-    .main{
+    .main {
         margin: 0 20px;
     }
 
-    .main-small-title{
+    .main-small-title {
         display: flex;
         text-align: left;
     }
@@ -526,11 +525,12 @@ button {
 
     .gold-fish {
         min-width: 315px;
-        height: 98px;
+        width: 100%;
     }
 
     .what {
-        grid-template-columns: repeat(3, 1fr);gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 
     .main-content-section {
@@ -542,10 +542,6 @@ button {
         display: grid;
         gap: 20px;
         padding-right: 0;
-    }
-
-    .footer-header{
-        font-size: 157px;
     }
 
     .footer .decorated-zone {
